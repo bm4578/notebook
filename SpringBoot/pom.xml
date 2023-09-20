@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <!--项目基本信息-->
   <groupId>com.by</groupId>
   <artifactId>SpringBoot</artifactId>
   <packaging>pom</packaging>
   <version>1.0</version>
-<!--  子模块-->
+  <!--    子模块-->
   <modules>
-    <module>notebook-common</module>
-    <module>notebook-admin</module>
-    <module>notebook-admin</module>
+    <module>common</module>
+    <module>admin</module>
   </modules>
-
-  <name>Maven</name>
-
   <!--    springboot版本-->
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -32,9 +29,12 @@
     <lombok-version>1.18.12</lombok-version>
     <mybatis-plus.version>3.4.2</mybatis-plus.version>
     <druid.version>1.2.8</druid.version>
+    <hutool-version>5.8.10</hutool-version>
     <mysql-connection.version>8.0.28</mysql-connection.version>
     <swagger-ui-version>2.0.9</swagger-ui-version>
     <springfox-version>3.0.0</springfox-version>
+    <jjwt.version>0.9.1</jjwt.version>
+    <commons-lang-version>2.6</commons-lang-version>
   </properties>
 
 
@@ -77,6 +77,24 @@
         <groupId>io.springfox</groupId>
         <artifactId>springfox-boot-starter</artifactId>
         <version>${springfox-version}</version>
+      </dependency>
+      <!--hutool-->
+      <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-all</artifactId>
+        <version>${hutool-version}</version>
+      </dependency>
+      <!--jwt-->
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>${jjwt.version}</version>
+      </dependency>
+      <!--commons-lang-->
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>${commons-lang-version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
