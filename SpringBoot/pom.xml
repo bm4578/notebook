@@ -13,6 +13,7 @@
   <modules>
     <module>common</module>
     <module>admin</module>
+    <module>web</module>
   </modules>
   <!--    springboot版本-->
   <parent>

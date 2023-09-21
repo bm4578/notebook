@@ -1,4 +1,4 @@
-package com.by.web;
+package com.by;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
